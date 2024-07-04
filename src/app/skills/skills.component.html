@@ -1,0 +1,16 @@
+<div class="skill-wrapper"
+[class.dragging]="currentlyDragging != undefined"
+ (mousemove)="mouseMove($event)">
+    @for (skill of skills; track skill;  let i = $index) {
+    
+        <div 
+        class="pill" 
+        [style.left]="skillPositions[i][0]"
+        [style.top]="skillPositions[i][1]"
+        [style.transform]="skillPositions[i][2]"
+        [class.dragging]="currentlyDragging != undefined"
+        (mousedown)="startDragging(i)"
+        (mouseup)="stopDragging()"
+        >{{ skill }}</div>
+    }    
+</div>
