@@ -4,9 +4,10 @@
     flex-direction: column;
     width: 650px;  
     margin-bottom: 30px; 
-    .mat-expansion-indicator::after{
-        color: white;
-    }
+
+    .mat-expansion-indicator::after {
+        color: white !important;
+    }  
   
     mat-expansion-panel{
         background-color: #21343c;   
@@ -35,10 +36,3 @@
     }
 }
 
-.mat-expansion-indicator::after {
-    color: white !important;
-}  
-
-.mat-expansion-indicator.ng-trigger.ng-trigger-indicatorRotate{
-    color: white !important;
-}
