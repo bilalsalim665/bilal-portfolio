@@ -1,0 +1,16 @@
+
+    <mat-accordion [multi]="true" openAll class="mat-accordion">
+        @for (experience of experiences; track i; let i=$index) {        
+        <mat-expansion-panel [expanded]="i===0" (opened)="panelChangedEmit()" (closed)="panelChangedEmit()">
+          <mat-expansion-panel-header>
+            <mat-panel-title> {{experience.company}} </mat-panel-title>
+            <mat-panel-title> {{experience.duration}} </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="experience-title">{{experience.role}}</p>
+            @for (responsibility of experience.responsibilities; track responsibility) {
+            <p class="responsibility"><strong>&bull;</strong> {{responsibility}}</p>
+            }          
+        </mat-expansion-panel>
+        }        
+    </mat-accordion>    
+

@@ -1,0 +1,27 @@
+
+.mat-accordion{ 
+    display: flex;
+    flex-direction: column;
+    width: 650px;  
+    margin-bottom: 30px; 
+    mat-expansion-panel{
+        background-color: #21343c;   
+    }
+    mat-expansion-panel-header{
+        padding: 15px;
+        font-size: 20px;
+        font-weight: 500;        
+    }   
+    .experience-title{
+        font-size: 20px;
+        font-weight: 500;
+        text-align: left;
+        margin: 8px;
+    }    
+    .responsibility{
+        padding: 2px;
+        margin: 2px 4px;
+        text-align: left;        
+    }
+}
+

@@ -1,20 +1,18 @@
 <main 
-(mousemove)="onMouseMove($event)"
-(mouseup)="onMouseOut()"
-(resize)="onResizeScreen()"    
+    
 >
     <div class="banner">
-        <h5>Lundeveloper</h5>
         <div>
-            <h1 class="left">ANIMATION spider man</h1>
-            <h1 class="right">using JAvascript</h1>
+            <h1 class="left">My Experience</h1>
         </div>
-        <h4>
-            Subscribe to the channel to continuously
-            <br>update interesting videos
-        </h4>
-        <button>Testing</button>
-
-        <canvas id="dotsCanvas" #canvasElement></canvas>
-    </div>
+        <div class="main-content">
+            <app-experience-tabs (newItemEvent)="panelChanged($event)"></app-experience-tabs>
+        </div>      
+        @if (isBrowser) {
+            <canvas id="dotsCanvas" #canvasElement></canvas>            
+        }
+    </div>      
 </main>  
+<!-- (mousemove)="onMouseMove(false)"
+(mouseup)="onMouseOut()"
+(resize)="onMouseMove(false)" -->
