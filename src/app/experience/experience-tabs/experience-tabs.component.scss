@@ -4,7 +4,9 @@
     flex-direction: column;
     width: 650px;  
     margin-bottom: 30px; 
-
+    .mat-expansion-indicator::after{
+        color: white;
+    }
   
     mat-expansion-panel{
         background-color: #21343c;   
